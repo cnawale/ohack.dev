@@ -1,0 +1,115 @@
+NMTSA (Youtube Videos): https://www.youtube.com/@nmtsaz (Implement Video Hosting. 
+Embed NMTSA videos in app.)
+
+NMTSA Programs: https://www.nmtsa.org/our-programs
+
+1) THERAPY PROGRAMS: 
+ 
+ a)Individual Neurologic Music Therapy (NMT)® Sessions: 
+   Registration Link for Music Therapy Services
+   https://www.nmtsa.org/request-services
+
+ b)Group Neurologic Music Therapy Sessions:
+   Contact: https://www.nmtsa.org/contact-us-ca09
+   (Implement enrollment in existing groups? No existing group information found. 
+   Implement Group Specific Discussion Formus)
+
+ c)Adapted Instrument Lessons
+   COST $45.00 per 30 minute lesson
+   Registration Email: register@nmtsa.org
+   Details of Intstrument Lessons: 
+   https://www.nmtsa.org/_files/ugd/072f2d_caa40ac47560494f9f5ae9ba002f961e.pdf
+   https://www.nmtsa.org/adapted-music-lessons
+
+   (No Registration Form available. Implement payment method for this course. 
+   Implement Discussion Forum. Mismatch of program cost on webpage and brochure)
+
+
+ d) Social Skills Programs
+    Registration and Contact Mail: bkracht@nmtsa.org 
+
+    (No Registration Page? Implement Common Discussion Forum)
+
+ e) Online Video Consultations (CONSULTATION)
+    Appointment Booking via Email info@nmtsa.org or call 602-840-6410
+    
+    (Create form to book appointment slots? Add field to classify course type.)
+
+2) PROFESSIONAL DEVELOPMENT
+
+    a) Professional Consultation/NMT Self-Study Program/Supervision, Mentorship (CONSULTATION)
+
+    Contact for booking: soliver@nmtsa.org
+    Registration Form and Details: https://www.nmtsa.org/_files/ugd/072f2d_51d7e20befa9464283b8a4b6e0de617c.pdf
+
+    (Create separate page for registration?)
+
+    b) Online Video Consultations (CONSULTATION)
+
+        Appointment Booking via Email info@nmtsa.org or call 602-840-6410
+        
+        (Create form to book appointment slots? Add field to classify course type.)
+
+    c) Presentations About Neurologic Music Therapy
+
+        Contact for additional information and presentations: 
+        e-mail us at info@nmtsa.org or call (602) 840-6410.
+
+3) COMMUNITY EDUCATION AND TRAINING (Video Materials)
+
+a) NMTSA Philosophy and Practice:  How Music Impacts the Brain and Impacts Our Lives
+   DATE OFFERED:  To Receive access to the Recording email info@nmtsa.org and type PHILOSOPHY AND PRACTICE in the subject line
+   COST: Free of charge to all NMTSA families 
+
+   (Create Videos and Material Section? Provide Video access based on User Group)
+
+b) Understanding Brain Differences in Persons With Autism
+   DATE OFFERED:  To Receive access to the Recording  email info@nmtsa.org and type BRAIN CONNECTIVITYin the subject line.
+   COST: Free of charge to all NMTSA families 
+
+   (Create Videos and Material Section? Provide Video access based on User Group)
+
+c) Ask The Director Hour (Q&A)
+
+    DATE OFFERED:  To Receive access to the Recording  email info@nmtsa.org and type ASK THE DIRECTOR.
+
+    To Receive access to any of the Recordings, type RECORDING with date/s in the subject line. 
+
+    06/01 (Questions Answered)
+    10/5 (Preparing for a Home Program/Use of Metronome)
+    03/01/ Help (Me Understand)
+
+    COST: Free of charge to all NMTSA families 
+
+ (This is a live Q&A Session with the Director. Implement video streaming. Store Q&A Recordings in Materials. AI Chatbot for Answering commonly asked questions?)
+
+d) Drum Home Program Training 
+
+    (No information on this course in NMTA Website)
+
+4) ADAPTED MUSIC LESSONS
+
+    {This is same as Program 1) c) Nothing to do here}
+
+
+  const [hidden, setHidden] = useState(true);
+  const [user, setUser] = useState('UserName/Email')
+  const [passwd, setPasswd] = useState('Password')
+  const [cpasswd, setCPasswd] = useState('Confirm Password')
+
+  const show = require("../assets/images/show.png")
+  const hide = require("../assets/images/hide.png")
+
+ {/* <View style={styles.container_field}>
+          <Text style={styles.field_text}>Re-Enter Your Password</Text>
+
+          <View style={[styles.field_input, { flexDirection: 'row' }]}>
+            <TextInput style={{ flex: 1, color: '#FFFFFF' }} placeholder='Confirm Password' placeholderTextColor={'#FFFFFF'} secureTextEntry={hidden}></TextInput>
+            <TouchableOpacity activeOpacity={0.8} onPress={() => { setHidden(!hidden) }}>
+              <Image
+                source={hidden ? show : hide}
+                style={styles.pass_icon}
+              />
+            </TouchableOpacity>
+          </View>
+        </View> */}
