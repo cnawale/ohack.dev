@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import {
   Image,
@@ -8,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Static image imports (keeps component clean and avoids reloading on each render)
 const IMAGES = {
@@ -108,6 +110,23 @@ export default function Login() {
   const handleLogin = () => {
     console.log(`Login Pressed: ${user} ${passwd}`);
     // Handle auth here
+    if (user=='' || passwd=='') {
+      alert('Please Enter All Required Fields')
+      return
+    }
+
+    axios.post('http://192.168.0.170:8080/login', {user, passwd})
+      .then(async response => {
+        const user = response.data.user 
+        alert('Login Success')
+        await AsyncStorage.setItem('user_id', user.user_nm);
+        console.log(`User ID saved ${user}`);
+        navigation.navigate('Stream')
+      })
+      .catch(error => {
+        alert('Invalid Username or Password.')
+        console.log(error);
+      });
   };
 
   const socialLogins = [

@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const IMAGES = {
   show: require('../assets/images/show.png'),
@@ -121,6 +123,7 @@ export default function Register() {
   };
 
   const passwordCheck = validatePasswords(values.passwd, values.cpasswd);
+  const navigation = useNavigation<any>()
 
   const handleSubmit = () => {
     console.log('SignUp Pressed:', values);
@@ -132,12 +135,16 @@ export default function Register() {
       return
     }
 
-    axios.post('http://10.157.164.41:8080/signup', values)
+    delete (values as any).cpasswd;
+    axios.post('http://192.168.0.170:8080/signup', values)
       .then(response => {
         console.log(response.data);
+        alert('SignUp Success')
+        navigation.navigate('Login')
       })
       .catch(error => {
-        console.error(error);
+        alert('User Already Exists.')
+        console.log(error);
       });
   };
 
